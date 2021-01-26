@@ -48,7 +48,7 @@ async def _(event):
             update_previous_welcome(event.chat_id, current_message.id)
 
 
-@command(pattern="^.savewelcome")  # pylint:disable=E0602
+@command(pattern="^.wel")  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -63,7 +63,7 @@ async def _(event):
         await event.edit("-  𖢞 Welcome saved - @IQTHON. ")
 
 
-@command(pattern="^.clearwelcome")  # pylint:disable=E0602
+@command(pattern="^.cle")  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -74,7 +74,7 @@ async def _(event):
         "The previous welcome message was `{}`.".format(cws.custom_welcome_message)
     )
 
-@command(pattern="^.listwelcome")  # pylint:disable=E0602
+@command(pattern="^.listw")  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -86,5 +86,5 @@ async def _(event):
     )
     else:
         await event.edit(
-            "No Welcome Message found"
+            "-  𖢞No Welcome Message found"
         )
